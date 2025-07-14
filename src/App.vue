@@ -25,12 +25,10 @@ const scene = new THREE.Scene();
 
 let astronaut;
 const loader = new GLTFLoader();
-loader.load('/models/astronaut.glb',
+loader.load('astronaut.glb',
 	function (gltf) { 
 		astronaut = gltf.scene;
 		scene.add(astronaut);
-		
-		
 		astronaut.position.set(2, 10, 0);
 		astronaut.rotation.y = 1;
 		setTimeout(() => {
@@ -48,10 +46,10 @@ loader.load('/models/astronaut.glb',
 
 //light
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
 scene.add(ambientLight);
 
-const topLight = new THREE.DirectionalLight(0xffffff, 1.2);
+const topLight = new THREE.DirectionalLight(0xffffff, 1.1);
 topLight.position.set(500, 500, 500);
 scene.add(topLight);
 

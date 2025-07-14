@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
 
-
+	base: '/cosmos/',
 	css: {
 		postcss: {
 			plugins: [
